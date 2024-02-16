@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Debian",
+	"build": {
+		// Path is relative to the devcontainer.json file.
+		"dockerfile": "dev-kit.Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack",
+				"ms-azuretools.vscode-docker",
+				"eamodio.gitlens",
+				"DavidAnson.vscode-markdownlint",
+				"llvm-vs-code-extensions.vscode-clangd"
+			],
+			"settings": {
+				"clangd.arguments": [
+					"--compile-commands-dir=${workspaceFolder}/build"
+				]
+			}
+		}
+	}
+}
